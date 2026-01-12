@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PO Mail Automation</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            background: white;
+            padding: 25px;
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+        }
+        button {
+            background: #0078d4;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>PO Mail Automation</h2>
+
+    <form action="/send-po" method="POST" enctype="multipart/form-data">
+
+        <label>PO Number</label>
+        <input type="text" name="po_number" required>
+
+        <label>Vendor Email</label>
+        <input type="email" name="vendor_email" required>
+
+        <label>Upload Released PO (PDF)</label>
+        <input type="file" name="po_pdf" accept="application/pdf" required>
+
+        <button type="submit">Send PO Mail</button>
+    </form>
+</div>
+
+</body>
+</html>
 
